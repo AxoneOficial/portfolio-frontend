@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Portfolio personal:Proyectos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Axone" />
+    <meta name="description" content="Portfolio personal de Axone." />
+    <meta name="keywords" content="portfolio, desarrollador web, HTML, CSS, JavaScript, frameworks modernos, Axone" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/x-icon" href="./../assets/favicon.ico" />
+    <link rel="stylesheet" href="./../assets/css/global.css" />
+    <link rel="stylesheet" href="./../assets/css/projects.css" />
+</head>
+
+<body>
+    <header>
+        <img src="./../assets/images/logo.svg" alt="Logo de Axone" class="logo" />
+        <nav>
+            <input type="checkbox" id="toggle-menu">
+            <label for="toggle-menu" class="menu-icon">&#9776;</label>
+            <ul>
+                <li><a href="#main">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a id="marcado" href="#">Proyectos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="about-container">
+        <section class="profile">
+            <div class="profile-text">
+                <h1>Mis proyectos</h1>
+                <p>Aquí encontrarás una selección de mis proyectos más destacados. Cada uno refleja mi pasión por la
+                    programación y mi compromiso con la calidad y la innovación. Desde aplicaciones web hasta sistemas
+                    backend, cada proyecto es un paso más en mi viaje como desarrollador.</p>
+            </div>
+        </section>
+        <section id="projects-list" class="projects-grid"></section>
+    </main>
+    <script src="./../js/routes/routePages.js"></script>
+    <script type="module" src="./../js/views/projectView.js"></script>
+</body>
+
+</html>

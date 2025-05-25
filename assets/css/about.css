@@ -1,0 +1,137 @@
+.about-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+.profile-photo {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
+}
+
+.profile-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.profile-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1abc9c;
+}
+
+.profile-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+.story {
+    margin-top: 40px;
+}
+
+.story h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1abc9c;
+}
+
+.story p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.skills-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills-container .skills,
+.skills-container .soft-skills {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    background-color: #1b1b1b;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(26, 255, 191, 0.1);
+}
+
+.skills-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #1abc9c;
+}
+
+.skills-container ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills-container ul li {
+    font-size: 1.05rem;
+    padding: 10px 15px;
+    margin-bottom: 12px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    color: #ccc;
+    transition: transform 0.2s ease;
+}
+
+.skills-container ul li:hover {
+    transform: scale(1.02);
+    background-color: #333;
+}
+
+.social-icons *{
+    padding: 5px;
+}
+
+.social-icons img{
+    width: 40px;
+    height: 40px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skills-container .skills,
+    .skills-container .soft-skills {
+        padding: 20px;
+    }
+
+    .skills-container ul li {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-text {
+        padding: 0 10px;
+    }
+}
