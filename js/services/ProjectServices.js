@@ -1,4 +1,4 @@
-import { ProjectController } from "../controllers/projectController";
+import { ProjectController } from "./../controllers/projectController.js";
 export class ProjectServices {
     constructor() {
         this.projectController = new ProjectController();
@@ -7,7 +7,7 @@ export class ProjectServices {
     async getProjects() {
         try {
             const response = await this.projectController.getProjects();
-            return response.data;
+            return response;
         } catch (error) {
             console.error("Error fetching projects:", error);
             throw error;

@@ -1,11 +1,12 @@
- //import { ProjectService } from "../services/ProjectService.js"; // Desactivado mientras no haya backend
+import { ProjectServices } from "../services/ProjectServices.js";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const container = document.getElementById("projects-list");
 
-    // 💡 Vector de ejemplo local con imagen y enlace GitHub
-    const projects  = [];// ProjectServicegetProjects() || []; // Desactivado mientras no haya backend
-    
+    const services = new ProjectServices();
+    const projects = await services.getProjects(); // necesitas async
+    console.log("Proyectos obtenidos:", projects);
+
     // Pintar los proyectos
     if (!projects || projects.length === 0) {
         container.innerHTML = "<p>No hay proyectos disponibles.</p>";
@@ -21,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     Inicio: ${project.startDate} - Fin: ${project.endDate || 'Actual'}
                 </span>
                 ${project.urlGithub
-                    ? `<a href="${project.urlGithub}" class="github-link" target="_blank" title="Ver en GitHub">
+                ? `<a href="${project.urlGithub}" class="github-link" target="_blank" title="Ver en GitHub">
                           <img src="./../assets/images/github.svg" alt="GitHub">
                        </a>`
-                    : ''
-                }
+                : ''
+            }
             </div>
         `).join("");
     }

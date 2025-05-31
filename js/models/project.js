@@ -8,6 +8,9 @@ export class Project {
         this.endDate = endDate;
         this.status = status;
         this.imgUrl = imgUrl;
+        this.img1Url = null;
+        this.img2Url = null;
+        this.img3Url = null;
         this.urlGithub = urlGithub;
     }
 }
